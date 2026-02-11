@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  // Since we are doing a static export, ensure images are unoptimized if using next/image
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
